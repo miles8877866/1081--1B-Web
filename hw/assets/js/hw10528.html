@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function add_book() {
+
+            var book = document.getElementById("book");
+            if (book.value == '') {
+                alert("請填寫書名");
+            } else {
+                var txtNode = document.createTextNode(book.value);
+
+                var li = document.createElement("li");
+                li.appendChild(txtNode);
+
+                var list = document.getElementById("list");
+
+                list.appendChild(li);
+
+                document.getElementById("bookCount").innerText = list.children.length;
+            }
+
+        }
+    </script>
+
+    <p>
+        書名:<input name="inBook" type="text" placeholder="請輸入" id="book" required>
+        <button type="submit" onclick="add_book()">新增一本書</button>
+    </p>
+
+
+    <ul id="list"></ul>
+    <p>現在有<span id="bookCount"> 0</span>本書</p>
+
+</body>
+
+</html>

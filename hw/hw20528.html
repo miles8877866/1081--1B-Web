@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function t() {
+            var flag = true;
+            var h = document.getElementById("height");
+            var w = document.getElementById("weight");
+            var height = h.value / 100;
+            var weight = w.value;
+
+            if (h.value == '' && w.value == '') {
+                alert("please input height & weight");
+                flag = false;
+                return;
+            }
+            if (h.value == '') {
+                alert("請填寫身高");
+                flag = false;
+                return;
+            }
+            if (w.value == '') {
+                alert('please input weight');
+                flag = false;
+                return;
+            }
+            if (flag) {
+                var bmi = weight / (height * height);
+                document.getElementById("BMICount").innerText = bmi.toString().substr(0, 4);
+            }
+        }
+    </script>
+    <p>
+        身高:<input type="text" id="height"> cm
+        <button id="count" onclick="t()">開始計算</button>
+    </p>
+    <p>
+        體重: <input type="text" id="weight"> kg
+        <input type="reset" value="reset">
+    </p>
+    <p>BMI: <span id="BMICount"></span></p>
+
+</body>
+
+</html>

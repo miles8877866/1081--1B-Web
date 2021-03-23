@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <script>
+            for (i = 0; i <= 10; i++) {
+                k = 0;
+                document.write(i + " ");
+                for (j = 0; j <= i; j++) {
+                    k = k + j;
+                }
+                document.write(k + '<br>');
+            }
+            document.write("<br>");
+        </script>
+    </div>
+    <div>
+        <script>
+            let j = 0;
+
+            while (j <= 10) {
+                document.write(j + " ");
+                k = 0;
+                i = 0;
+                while (k <= j) {
+                    i = i + k;
+                    k++;
+                }
+                document.write(i + "<br>");
+                j++;
+            }
+            document.write("<br>")
+        </script>
+    </div>
+
+    <div>
+        <script>
+            let a = 0;
+
+            do {
+                document.write(a + " ");
+                b = 0;
+                c = 0;
+                do {
+                    c = c + b;
+                    b++;
+                } while (b <= a)
+                document.write(c + "<br>");
+                a++;
+            } while (a <= 10)
+            document.write("<br>")
+        </script>
+
+    </div>
+
+</body>
+
+</html>

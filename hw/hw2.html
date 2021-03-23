@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const d = new Date();
+        document.writeln(d.toLocaleString());
+        document.writeln("<br/>");
+        document.writeln("Today is " + d.getDate());
+        document.writeln("<br/>");
+        document.writeln("今天星期" + d.getDay());
+
+        function test_now() {
+            alert("今天星期" + d.getDay());
+        }
+        document.write('<br>');
+
+        function text() {
+            var iElement = prompt("輸入星期幾(0-6)")
+
+            if (iElement == 1) {
+                alert("Mon");
+            }
+            if (iElement == 2) {
+                alert("Yue");
+            }
+            if (iElement == 3) {
+                alert("Wen");
+            }
+            if (iElement == 4) {
+                alert("Thur");
+            }
+            if (iElement == 5) {
+                alert("Fri");
+            }
+            if (iElement == 6) {
+                alert("Sat");
+            }
+            if (iElement == 0) {
+                alert("Sun");
+            }
+
+        }
+    </script>
+
+    <input type="button" value="Test Now" onclick="test_now()">
+    <input type="button" value="Text" onclick="text()">
+</body>
+
+</html>
